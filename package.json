@@ -1,5 +1,5 @@
 {
-  "name": "loanApp",
+  "name": "loan101",
   "private": true,
   "scripts": {
     "start": "meteor run",
