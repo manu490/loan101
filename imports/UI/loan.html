@@ -1,0 +1,79 @@
+<head>
+  <title>loanApp</title>
+</head>
+
+<body>
+  {{> navbar}}
+  <h2>Borrow and lend money..Try loanApp!</h2>
+  {{> LoginForm}}
+  {{> requestForm}}
+  {{> Txn}}
+</body>
+
+<template name="LoginForm">
+  <div class="container atForm">
+    {{> atForm}}
+  </div>
+</template>
+
+<template name="navbar">
+  {{#if loggedin}}
+  <button class="logout-button">Logout</button>
+  {{/if}}
+</template>
+
+<template name="requestForm">
+  {{#if lender_check}}
+    <form class="form-group">
+      <label for="amount">Amount:</label>
+      <input type="text" class="form-control" id="amountId" placeholder="Enter Amount" name="amount">
+      <button type="submit" class="btn btn-default js-request-loan ">Request Loan</button>
+    </form>
+  {{/if}}
+</template>
+
+
+<template name="Txn">
+  {{#if loggedin}}
+  <h4>Past Transactions</h4>
+  <table>
+    <thead>
+      <tr>
+        <td>Date of txn</td>
+        <td>Amount</td>
+        <td>Status</td>
+      </tr>
+    </thead>
+    {{#each past_tranx}}
+    <tbody>
+      <tr>
+        <td>{{createdOn}}</td>
+        <td>{{Amount}}</td>
+        <td>Approved</td>
+      </tr>
+    </tbody>
+    {{/each}}
+  </table>
+  <h4>Current Transactions</h4>
+  <table>
+    <thead>
+      <tr>
+        <td>Date of txn</td>
+        <td>Amount</td>
+        <td>Action</td>
+      </tr>
+    </thead>
+    {{#each curr_tranx}}
+    <tbody>
+      <tr>
+        <td>{{createdOn}}</td>
+        <td>{{Amount}}</td>
+        <td>
+          <button class="btn btn-success approve-stat">{{action}}</button>
+        </td>
+      </tr>
+    </tbody>
+    {{/each}}
+  </table>
+  {{/if}}
+</template>

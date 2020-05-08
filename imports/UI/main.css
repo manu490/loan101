@@ -1,0 +1,13 @@
+body {
+  padding: 10px;
+  font-family: sans-serif;
+}
+.atForm{
+  width:400px;
+}
+thead{
+  font-weight: bold;
+}
+td{
+  width:150px;
+}
