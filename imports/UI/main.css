@@ -2,12 +2,19 @@ body {
   padding: 10px;
   font-family: sans-serif;
 }
+h2{
+  text-align: center;
+}
 .atForm{
   width:400px;
+  margin-top: 30px;
 }
 thead{
   font-weight: bold;
 }
 td{
   width:150px;
+}
+label{
+  width:100px;
 }
