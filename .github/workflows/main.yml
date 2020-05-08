@@ -32,3 +32,8 @@ jobs:
       with:
         # Specific Meteor.js release. For example: 1.8.2
         meteor-release: 1.8.2
+      
+    - name: meteor npm install, build and test
+      run: |
+        meteor npm install
+        meteor
