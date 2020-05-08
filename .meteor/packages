@@ -24,4 +24,5 @@ useraccounts:core
 useraccounts:bootstrap
 accounts-password
 accounts-ui
+jquery
 twbs:bootstrap

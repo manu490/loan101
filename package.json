@@ -1,5 +1,5 @@
 {
-  "name": "loanApp",
+  "name": "loan101",
   "private": true,
   "scripts": {
     "start": "meteor run",
@@ -12,10 +12,12 @@
     "babel-core": "^6.26.3",
     "babel-polyfill": "^6.26.0",
     "bcrypt": "^4.0.1",
+    "bootstrap": "^4.4.1",
     "collections.js": "0.0.7",
     "imports": "^1.0.0",
     "jquery": "^3.5.1",
-    "meteor-node-stubs": "^1.0.0"
+    "meteor-node-stubs": "^1.0.0",
+    "popper.js": "^1.16.1"
   },
   "meteor": {
     "mainModule": {
