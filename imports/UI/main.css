@@ -1,20 +1,35 @@
 body {
-  padding: 10px;
   font-family: sans-serif;
 }
-h2{
+h2,h3,h4{
   text-align: center;
+  font-size: 18px;
+  font-weight: 400;
 }
+h2{font-size: 22px;}
 .atForm{
   width:400px;
-  margin-top: 30px;
+  margin-top: 0px;
 }
 thead{
   font-weight: bold;
+  margin-bottom: 20px;
 }
 td{
-  width:150px;
+  width: auto;;
 }
 label{
   width:100px;
+}
+
+.to-lineit{
+  width : 200px !important;
+  margin-top: 10px !important;
+}
+.request-form{
+  margin-top: 50px;
+}
+.txn-card{
+  padding-top: 20px;
+  margin-top: 20px;
 }

@@ -10,29 +10,37 @@
   {{> navbar}}
   <h2>Borrow and lend money..Try loanApp!</h2><br>
   {{> LoginForm}}
-  {{> requestForm}}
   {{> Txn}}
+  {{> requestForm}}
 </body>
 
 <template name="LoginForm">
   <div class="container atForm">
-    {{> atForm}}
+    <!--from useraccounts package, can also use loginButtons -->
+    {{> atForm }}
   </div>
 </template>
 
 <template name="navbar">
-  {{#if loggedin}}
+  {{#if loggedin}}<!--checks if user loggedin-->
   <button class="logout-button">Logout</button>
   {{/if}}
 </template>
-
+<!--Request form only for borrower Role User-->
 <template name="requestForm">
-  {{#if lender_check}}
+  {{#if borrow_check}}
+  <div class="container-fluid request-form card">
+  <h3>Request New loan</h3>
+  <div class="to-lineit">
     <form class="form-group">
       <label for="amount">Amount:</label>
       <input type="text" class="form-control" id="amountId" placeholder="Enter Amount" name="amount">
+      <label for="amount">Email:</label>
+      <input type="text" class="form-control" id="Email" placeholder="Enter Email Address" name="Email">
       <button type="submit" class="btn btn-default js-request-loan ">Request Loan</button>
     </form>
+  </div>
+</div>
   {{/if}}
 </template>
 
@@ -40,7 +48,8 @@
 <template name="Txn">
   {{#if loggedin}}
   <h4>Past Transactions</h4>
-  <table>
+ <div class="txn-card card container-fluid">
+  <table >
     <thead>
       <tr>
         <td>Date of txn</td>
@@ -58,7 +67,9 @@
     </tbody>
     {{/each}}
   </table>
+</div>
   <h4>Current Transactions</h4>
+  <div class="txn-card card container-fluid">
   <table>
     <thead>
       <tr>
@@ -79,5 +90,6 @@
     </tbody>
     {{/each}}
   </table>
+</div>
   {{/if}}
 </template>
